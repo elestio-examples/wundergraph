@@ -8,3 +8,5 @@ services:
       - "WG_PUBLIC_NODE_URL=https://${DOMAIN}"
     ports:
       - "172.17.0.1:28271:9991"
+    volumes:
+      - ./.wundergraph:/app
