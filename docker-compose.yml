@@ -1,0 +1,10 @@
+version: "3.2"
+
+services:
+  wundergraph:
+    image: elestio4test/wundergraph:latest
+    restart: always
+    environment:
+      - "WG_PUBLIC_NODE_URL=https://${DOMAIN}"
+    ports:
+      - "172.17.0.1:28271:9991"
