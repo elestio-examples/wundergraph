@@ -3,9 +3,11 @@ version: "3.2"
 services:
   wundergraph:
     # image: elestio4test/wundergraph:latest
-    build:
-      context: ./bin
+    container_name: wundergraph
+    image: wundergraph
     restart: always
+    build:
+      context: .
     environment:
       - "WG_PUBLIC_NODE_URL=https://${DOMAIN}"
     ports:
