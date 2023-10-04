@@ -6,7 +6,10 @@ ports:
     targetIP: "172.17.0.1"
     public: true
     path: "/"
-    isAuth: false
+    isAuth: true
+    login: "admin"
+    loginTitle: "Wundergraph"
+    password: "random_password"
 environments:
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
@@ -31,8 +34,8 @@ lifeCycleConfig:
   preRestoreCommand: "./scripts/preRestore.sh"
   postRestoreCommand: "./scripts/postRestore.sh"
   postDeployCommand: "./scripts/postDeploy.sh"
-webUI:
-  - url: "https://[CI_CD_DOMAIN]"
-    label: "Wundergraph"
-    login: "[ADMIN_EMAIL]"
-    password: "[ADMIN_PASSWORD]"
+# webUI:
+#   - url: "https://[CI_CD_DOMAIN]"
+#     label: "Wundergraph"
+#     login: "[ADMIN_EMAIL]"
+#     password: "[ADMIN_PASSWORD]"
