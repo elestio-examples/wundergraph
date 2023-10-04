@@ -8,10 +8,32 @@ Deploy Wundergraph server with CI/CD on Elestio
 <br/>
 <br/>
 
+# Steps to clone this repository and run locally
+
+### Step 1: Clone this repository
+
+```
+git clone YOUR_REPOSITORY_URL
+```
+
+### Step 2: Make some changes and push
+
+Try to make some change in your Wundergraph project then push to the git repository
+
+After few seconds to few minutes your change will be deployed on your CI/CD target 🚀
+
 # Once deployed ...
 
 You can open Wundergraph UI here:
 
     URL: https://[CI_CD_DOMAIN]
-    email: [ADMIN_EMAIL]
+    login: admin
     password: [ADMIN_PASSWORD]
+
+# Examples
+
+You can access to your endpoint via curl command. You can try it with the endpoint that we have implemented like that:
+
+    curl -v --get --user 'admin:[ADMIN_PASSWORD]' --data-urlencode 'wg_variables={"countryCode": "US"}' 'https://[CI_CD_DOMAIN]/operations/country-weather/CountryWeather'
+
+for more examples you can read the <a href="https://docs.wundergraph.com/docs/examples" target="_blank">WunderGraph Documentation</a>
