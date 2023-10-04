@@ -4,7 +4,7 @@ services:
   wundergraph:
     # image: elestio4test/wundergraph:latest
     build:
-      context: ./bin/Dockerfile
+      context: ./bin
     restart: always
     environment:
       - "WG_PUBLIC_NODE_URL=https://${DOMAIN}"
