@@ -4,6 +4,8 @@ ARG wg_public_node_url
 
 WORKDIR /app
 
+RUN npm install
+
 COPY ./my-project/package.json ./my-project/package-lock.json /app/
 # We place the binary in /usr/bin/wunderctl so we can find it without a relative path
 ENV CI=true WG_COPY_BIN_PATH=/usr/bin/wunderctl
