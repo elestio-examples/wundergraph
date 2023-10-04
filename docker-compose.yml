@@ -2,11 +2,15 @@ version: "3.2"
 
 services:
   wundergraph:
-    image: elestio4test/wundergraph:latest
+    # image: elestio4test/wundergraph:latest
+    build:
+      context: ./bin/Dockerfile
     restart: always
     environment:
       - "WG_PUBLIC_NODE_URL=https://${DOMAIN}"
     ports:
       - "172.17.0.1:28271:9991"
-    volumes:
-      - ./.wundergraph:/app
+    # volumes:
+    #   - ./.wundergraph/wundergraph.config.ts:/app/.wundergraph/wundergraph.config.ts
+    #   - ./.wundergraph/wundergraph.operations.ts:/app/.wundergraph/wundergraph.operations.ts
+    #   - ./.wundergraph/wundergraph.server.ts:/app/.wundergraph/wundergraph.server.ts
