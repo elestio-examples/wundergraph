@@ -30,6 +30,13 @@ You can open Wundergraph UI here:
     login: admin
     password: [ADMIN_PASSWORD]
 
+# Workspace
+
+You can modify or add new files in my-project/.wundergraph
+If you want to create a new endpoint, just create a new folder in my-project/.wundergraph/operations and add into this folder a graphql file.
+
+The new endpoint will be like https://[CI_CD_DOMAIN]/operations/`<NAME_OF_YOUR_FOLDER>`/`<NAME_OF_YOUR_FILE_WITHOUT_.graphql>`
+
 # Examples
 
 You can access to your endpoint via curl command. You can try it with the endpoint that we have implemented like that:
